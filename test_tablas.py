@@ -1,4 +1,4 @@
-### INTRO ###
+###  ###  ###  ### ###  ###  ###  ### INTRO ### ###  ###  ###  ### ###  ###  ###  ###
 
 import os
 import pandas as pd
@@ -19,7 +19,7 @@ bases["w1_bdm_e_beta"].head()
 for base in bases:
     bases[base]["folio_unico"] = bases[base]["folio_villa"].astype('str') + '-' + bases[base]["folio_vivienda"].astype('str')
 
-### PARTE I ###
+### ###  ###  ###  ### ###  ###  ###  ### PARTE I ### ###  ###  ###  ### ###  ###  ###  
 
 cols = ["folio_unico", "H3", "H5", "H9", "H7", "CS19", "CS20", "O19a", "O20"]
 
@@ -34,7 +34,7 @@ df.head()
 #df.to_csv('output_test1.csv', sep=',', encoding='utf-8', index = False)
 
 
-#### PARTE II ###
+### ###  ###  ###  ### ###  ###  ###  ### PARTE II ### ###  ###  ###  ### ###  ###  ### 
 
 cols2 = ["SB3", "SU2_1", "CS19", "SA15a", "folio_unico"]
 cols3 = ["P1_1", "P1_2", "P11", "folio_unico"] 
@@ -54,7 +54,7 @@ dfb1 = (dfa.join(dfb.set_index("folio_unico"), how="left", on="folio_unico", lsu
 dfb1.head()
 #dfb1.to_csv('ejemplo2.csv', sep=',', encoding='utf-8', index = False)
           
-#### PARTE III ###
+#### ###  ###  ###  ### ###  ###  ###  ### PARTE III ### ###  ###  ###  ### ###  ###  ### 
 
 #### Base con información de Brisas del Mar y Marta Brunet de la pauta de observación, todas las preguntas. Las olas y villas se agregan como filas. 
 

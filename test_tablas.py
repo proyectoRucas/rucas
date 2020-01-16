@@ -1,9 +1,9 @@
 # El objetivo del siguiente test es poder realizar las consultas solicitadas en un ambiente separado del programa principal con el objetivo de resguardar la información ya generada y mantener la autonomía de los procesos. 
  
 import os
-import json
+
 import pandas as pd
-import pyreadstat
+
 
 # Directorio de bases a cargar
 dir_path = "/directorio/de/carpeta/donde/alojan/las/bases/"

@@ -36,8 +36,8 @@ df.head()
 
 #### PARTE II ###
 
-cols2 = ["folio_unico", "SB3", "SU2_1", "CS19", "SA15a"]
-cols3 = ["P1_1", "P1_2", "P11"] 
+cols2 = ["SB3", "SU2_1", "CS19", "SA15a", "folio_unico"]
+cols3 = ["P1_1", "P1_2", "P11", "folio_unico"] 
 
 dfa = bases["w1_bdm_e_beta"].loc[:, ["folio_vivienda"] + cols2]
 dfb = bases["w1_bdm_p"].loc[:, cols3]
@@ -45,9 +45,9 @@ dfc = bases["w2_bdm_p"].loc[:, cols3]
 dfd = bases["w3_bdm_p"].loc[:, cols3]
 
 
-dfb1 = (dfa.join(dfb.set_index("folio_vivienda"), how="left", on="folio_vivienda", lsuffix="_00a", rsuffix="_01a")
+dfb1 = (dfa.join(dfb.set_index("folio_unico"), how="left", on="folio_unico", lsuffix="_00a", rsuffix="_01a")
         .join(dfc.set_index("folio_unico"), how="left", on="folio_unico", lsuffix="", rsuffix="_02a")
-        .join(dfd.set_index('folio_unico'), how="left", on="folio_unico", lsuffix="", rsuffix="_03a")
+        .join(dfd.set_index("folio_unico"), how="left", on="folio_unico", lsuffix="", rsuffix="_03a")
        )
 
 

@@ -41,4 +41,3 @@ for file in os.listdir(dir_path):
 	
 #### PARA TODO EFECTO; BRISAS DEL MAR = 1 / MARTA BRUNET = 2
 
-
